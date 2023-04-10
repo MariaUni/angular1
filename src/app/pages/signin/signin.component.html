@@ -1,0 +1,46 @@
+<main>
+  <form [formGroup]="form" class="example-form">
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input
+        type="email"
+        matInput
+        placeholder="Ex: pat@examplu.com"
+        formControlName="email"
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Parola</mat-label>
+      <input
+        type="password"
+        matInput
+        placeholder="Parola"
+        formControlName="password"
+      />
+    </mat-form-field>
+
+    <div class="aligned-to-left">
+      <button
+        mat-button
+        [disabled]="!form.get('email')!.valid"
+        test-id="recover-password-button"
+      >
+        Recuperare parolă
+      </button>
+    </div>
+    <button
+      mat-raised-button
+      color="primary"
+      test-id="login-button"
+      [disabled]="!form.valid"
+    >
+      Autentificare
+    </button>
+    <button mat-stroked-button color="primary">Înregistrare</button>
+  </form>
+</main>
+<!-- <input matInput [type]="hide ? 'password' : 'text'">
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button> -->

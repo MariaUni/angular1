@@ -1,0 +1,30 @@
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.example-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  button,
+  mat-form-field {
+    width: -webkit-fill-available;
+  }
+}
+
+button {
+  margin: 5px 0;
+  &[mat-button] {
+    width: auto;
+  }
+}
+
+.aligned-to-left {
+  text-align: right;
+  width: 100%;
+}
